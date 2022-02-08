@@ -25,33 +25,33 @@
 	/*  1. FULL OVERLYAY MENU
 	/* ----------------------------------------------------------- */
 
-   $('.mu-menu-btn').on('click', function(event) {
+//    $('.mu-menu-btn').on('click', function(event) {
 	   
-        event.preventDefault();
+//         event.preventDefault();
         
-        $('.mu-menu-full-overlay').addClass('mu-menu-full-overlay-show');
+//         $('.mu-menu-full-overlay').addClass('mu-menu-full-overlay-show');
        
-    });
+//     });
    
-    // when click colose btn
+//     // when click colose btn
     
-    $('.mu-menu-close-btn').on('click', function(event) {
+//     $('.mu-menu-close-btn').on('click', function(event) {
 	    
-	    event.preventDefault();
+// 	    event.preventDefault();
 	    
-		$('.mu-menu-full-overlay').removeClass('mu-menu-full-overlay-show');
+// 		$('.mu-menu-full-overlay').removeClass('mu-menu-full-overlay-show');
 		
-    });
+//     });
 
-    // when click menu item overlay disappear
+//     // when click menu item overlay disappear
 
-    $('.mu-menu a').on('click', function(event) {
+//     $('.mu-menu a').on('click', function(event) {
 	   
-        event.preventDefault();
+//         event.preventDefault();
         
-        $('.mu-menu-full-overlay').removeClass('mu-menu-full-overlay-show');
+//         $('.mu-menu-full-overlay').removeClass('mu-menu-full-overlay-show');
        
-    });
+//     });
 
     /* ----------------------------------------------------------- */
 	/*  2. MENU SMOOTH SCROLLING
@@ -120,6 +120,52 @@
 	    e.stopPropagation();
 	});
 
+			
+	/* ----------------------------------------------------------- */
+	/*  4. Demo VIDEO POPUP
+	/* ----------------------------------------------------------- */
+
+	$('.demo-video-play-btn').on('click', function(event) {
+	   
+        event.preventDefault();
+        
+        $('.demo-video-iframe-area').addClass('demo-video-iframe-display');
+       
+    });
+   
+    // when click the close btn
+
+    // disappear iframe window
+    
+    $('.demo-video-close-btn').on('click', function(event) {
+	    
+	    event.preventDefault();
+	    
+		$('.demo-video-iframe-area').removeClass('demo-video-iframe-display');
+		
+    });
+
+    // stop iframe if it is play while close the iframe window
+
+    $('.demo-video-close-btn').click(function(){
+
+        $('.demo-video-iframe').attr('src', $('.demo-video-iframe').attr('src'));
+
+    });
+
+    // when click overlay area
+
+     $('.demo-video-iframe-area').on('click', function(event) {
+	    
+	    event.preventDefault();
+	    
+		$('.demo-video-iframe-area').removeClass('demo-video-iframe-display');
+		
+    });
+
+	$('.demo-video-iframe-area, .demo-video-iframe').on('click', function(e){
+	    e.stopPropagation();
+	});
 		
 	/* ----------------------------------------------------------- */
 	/*  4. APPS SCREENSHOT SLIDEER ( SLICK SLIDER )

@@ -317,10 +317,13 @@ button:focus {
 .mu-feature-btn {
 	color: #fff;
 	font-size: 18px;
+	pointer-events: none;
+	cursor: default;
 }
 
 .mu-feature-btn:hover {
-	color: #fff;
+	/* color: #fff; */
+	cursor: default;
 }
 
 .mu-feature-content-right .media-heading {
@@ -524,12 +527,12 @@ button:focus {
 }
 
 .teampic {
-	width: 200px;
-	border-radius: 10px;
+	height: 200px;
+	width: auto;
 	border-style: solid;
 	border-color: #ff1616;
-	height: auto;
 	border-radius: 200px;
+	object-fit: contain;
 }
 
 /*--------------------*/
